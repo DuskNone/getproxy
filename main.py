@@ -6,7 +6,7 @@ import sys
 class GetProxy:
 
     def http():
-        out_file = "Proxies/proxyHttp.txt"
+        out_file = "proxyHttp.txt"
         proxies = open(out_file, 'wb')
         r1 = requests.get('https://api.openproxylist.xyz/http.txt')
         proxies.write(r1.content)
@@ -20,7 +20,7 @@ class GetProxy:
 
     def sock4():
         r1 = requests.get('https://api.openproxylist.xyz/socks4.txt')
-        out_file = "Proxies/proxySock4.txt"
+        out_file = "proxySock4.txt"
         proxies = open(out_file, 'wb')
         proxies.write(r1.content)
         length = []
@@ -33,7 +33,7 @@ class GetProxy:
 
     def sock5():
         r1 = requests.get('https://api.openproxylist.xyz/socks5.txt')
-        out_file = "Proxies/proxySock5.txt"
+        out_file = "proxySock5.txt"
         proxies = open(out_file, 'wb')
         proxies.write(r1.content)
         length = []
